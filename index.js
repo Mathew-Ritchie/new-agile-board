@@ -212,7 +212,7 @@ function setupEventListeners() {
   //Open and close menu at three dot button
   const editBoardBtn = document.getElementById("edit-board-btn");
 
-  editBoardBtn.addEventListener("click", () => toggleMobileMenu(true));
+  editBoardBtn.addEventListener("click", toggleMobileMenu);
 
   //close button in mobile menu
   const hideMobileMenu = document.getElementById("mobile-hide-side-bar-btn");
@@ -294,13 +294,13 @@ function toggleSidebar(show) {
 const mobileSideBar = document.getElementById("mobile-side-bar-div");
 
 function toggleMobileMenu(show) {
-  if (show) {
+  if (mobileSideBar.style.display === "block") {
     //if true, sidebar display style set to block "block", showSideBarBtn button is either "none" or "block" depending on if the sideBasr is open or not.
-    mobileSideBar.style.display = "block";
-    localStorage.setItem("showMobileMenu", "true"); //updating state in local storage
-  } else {
     mobileSideBar.style.display = "none";
     localStorage.setItem("showMobileMenu", "false"); //updating state in local storage
+  } else {
+    mobileSideBar.style.display = "block";
+    localStorage.setItem("showMobileMenu", "true"); //updating state in local storage
   }
 }
 
@@ -393,6 +393,13 @@ function init() {
 
   const showSidebar = localStorage.getItem("showSideBar") === "true";
   toggleSidebar(showSidebar);
+
+  const showMobileMenu = localStorage.getItem("showMobileMenu");
+  if (showMobileMenu === "true") {
+    mobileSideBar.style.display = "block";
+  } else {
+    mobileSideBar.style.display = "none";
+  }
 
   updateTheme();
 

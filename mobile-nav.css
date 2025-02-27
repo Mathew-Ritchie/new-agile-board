@@ -142,3 +142,9 @@ input:checked + #mobile-label-checkbox-theme:after {
   border-radius: 10px;
   border: #219c90;
 }
+
+@media screen and (min-width: 800px) {
+  .mobile-side-bar {
+    display: none !important;
+  }
+}
