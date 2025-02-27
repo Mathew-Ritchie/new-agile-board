@@ -1,0 +1,60 @@
+#new-board-form {
+  background-color: var(--primary-color);
+  height: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 15px;
+  border-radius: 10px;
+  z-index: 10;
+  width: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+}
+
+#new-board-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.new-board-input {
+  width: 220px;
+  background-color: var(--primary-color);
+  border: 1px solid #424852;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#new-board-btn-div {
+  display: flex;
+  justify-content: center;
+  /* width: 100%; */
+  gap: 20px;
+}
+
+#new-board-btn-div button {
+  width: 100px;
+  font-size: large;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  font-size: 16px;
+  padding: 12px;
+}
+
+#new-board-submit-btn {
+  background-color: #219c90;
+  color: white;
+}
+
+#new-board-close {
+  background-color: #ea5555;
+  color: white;
+}

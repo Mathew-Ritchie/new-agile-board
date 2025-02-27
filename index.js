@@ -32,6 +32,10 @@ const elements = {
   sideBar: document.getElementById("side-bar-div"),
   showSideBarBtn: document.getElementById("show-side-bar-btn"),
   editTaskModalWindow: document.querySelector(".edit-task-modal-window"),
+  newBoardForm: document.getElementById("new-board-form"),
+  newBoardInput: document.getElementById("new-board-input"),
+  newBoardSubmitBtn: document.getElementById("new-board-submit-btn"),
+  newBoardCloseBtn: document.getElementById("new-board-close"),
 };
 //console.log(elements.dropDownBtn);
 /////////// BOARD FUNCTIONS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -111,8 +115,6 @@ function styleActiveBoard(boardName) {
 function filterAndDisplayTasksByBoard(boards) {
   const tasks = taskFunctions.getTasks(); // Fetch tasks from a simulated local storage function
   const filteredTasks = tasks.filter((task) => task.board === boards);
-  //console.log(tasks);
-  //console.logs(filteredTasks);
 
   // creating the colums for each status and giving them the correct title
   elements.columnDivs.forEach((column) => {
@@ -202,6 +204,15 @@ function setupEventListeners() {
     elements.filterDiv.style.display = "none"; // Also hide the filter overlay
   });
 
+  //////Add new board/////////////////
+  elements.newBoardForm.addEventListener("submit", addNewBoard);
+  elements.newBoardCloseBtn.addEventListener("click", closeNewBoardForm);
+
+  const addNewBoardButton = document.getElementById("add-new-board");
+  addNewBoardButton.addEventListener("click", () => {
+    elements.newBoardForm.style.display = "block";
+  });
+
   //////Side bar event listeners
   // Hide sidebar event listener
   elements.hideSideBarBtn.addEventListener("click", () => toggleSidebar(false));
@@ -249,6 +260,42 @@ function toggleModal(show, modal = elements.modalWindow) {
 /*************************************************************************************************************************************************
  * COMPLETE FUNCTION CODE
  * **********************************************************************************************************************************************/
+
+function addNewBoard(event) {
+  event.preventDefault();
+  const boardName = elements.newBoardInput.value.trim();
+
+  if (!boardName) {
+    alert("board name cannot be empty.");
+    return;
+  }
+
+  const tasks = taskFunctions.getTasks();
+  const boards = [...new Set(tasks.map((task) => task.board))];
+
+  if (boards.includes(boardName)) {
+    alert("board name already exists.");
+    return;
+  }
+
+  const newTask = {
+    id: Date.now(),
+    title: "Example Task",
+    description: "This is an example task. Edit or delete me",
+    status: "todo",
+    board: boardName,
+  };
+
+  taskFunctions.createNewTask(newTask);
+
+  fetchAndDisplayBoardsAndTasks();
+  elements.newBoardInput.value = "";
+  elements.newBoardForm.style.display = "none";
+}
+
+function closeNewBoardForm() {
+  elements.newBoardForm.style.display = "none";
+}
 
 /// Functions to add tasked through the add task modal
 function addTask(event) {

@@ -10,6 +10,7 @@
     </style>
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./mobile-nav.css" />
+    <link rel="stylesheet" href="./add-board-form.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.svg" />
     <title>Agile Board Task Management</title>
   </head>
@@ -26,6 +27,7 @@
           <h4 id="headline-sidepanel">ALL BOARDS</h4>
         </div>
         <div class="side-bar-bottom">
+          <button id="add-new-board">Add New Board</button>
           <div class="toggle-div">
             <img src="./assets/icon-dark-theme.svg" id="icon-dark" alt="icon-dark-theme" />
             <input type="checkbox" id="switch" />
@@ -196,6 +198,23 @@
     </div>
 
     <div id="filterDiv"></div>
+
+    <!-- Add new Board modal window -->
+
+    <form id="new-board-form">
+      <div id="new-board-div">
+        <input
+          type="text"
+          placeholder="New baord name"
+          class="new-board-input"
+          id="new-board-input"
+        />
+        <div id="new-board-btn-div">
+          <button id="new-board-submit-btn">Add</button>
+          <button id="new-board-close">Close</button>
+        </div>
+      </div>
+    </form>
 
     <!-- JavaScript Import -->
     <script type="module" src="./index.js"></script>
