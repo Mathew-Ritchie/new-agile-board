@@ -32,6 +32,7 @@ const elements = {
   sideBar: document.getElementById("side-bar-div"),
   showSideBarBtn: document.getElementById("show-side-bar-btn"),
   editTaskModalWindow: document.querySelector(".edit-task-modal-window"),
+  mobileAddNewBoardBtn: document.getElementById("mobile-add-new-board-btn"),
   newBoardForm: document.getElementById("new-board-form"),
   newBoardInput: document.getElementById("new-board-input"),
   newBoardSubmitBtn: document.getElementById("new-board-submit-btn"),
@@ -206,11 +207,19 @@ function setupEventListeners() {
 
   //////Add new board/////////////////
   elements.newBoardForm.addEventListener("submit", addNewBoard);
-  elements.newBoardCloseBtn.addEventListener("click", closeNewBoardForm);
+  elements.newBoardCloseBtn.addEventListener("click", () => {
+    closeNewBoardForm();
+    toggleMobileMenu();
+  });
 
   const addNewBoardButton = document.getElementById("add-new-board");
   addNewBoardButton.addEventListener("click", () => {
     elements.newBoardForm.style.display = "block";
+  });
+
+  elements.mobileAddNewBoardBtn.addEventListener("click", () => {
+    elements.newBoardForm.style.display = "block";
+    toggleMobileMenu();
   });
 
   //////Side bar event listeners
