@@ -1,0 +1,261 @@
+@media screen and (max-width: 800px) {
+  /* .task-div {
+          width: 450px;
+      } */
+
+  /* .side-bar.show-sidebar {
+      display: none !important;
+    }
+  
+  
+    .container {
+      max-width: 100%;
+    }
+  
+    #header-board-name {
+      font-size: 12px;
+    } */
+
+  .side-bar.show-sidebar {
+    position: fixed;
+    height: auto;
+  }
+
+  #show-side-bar-btn {
+    display: none !important;
+  }
+  .side-bar {
+    display: none !important;
+  }
+
+  #layout {
+    margin: 0;
+    padding: 0;
+  }
+
+  #edit-btn {
+    right: 0px;
+  }
+
+  #filterDiv {
+    height: 100%;
+    position: fixed;
+  }
+
+  .dropdownBtn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    padding: 0;
+  }
+
+  .logo-mobile {
+    display: block;
+    margin-right: 0px;
+    width: 70px;
+    height: 13%;
+  }
+
+  #mobile-logo-boardname {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  body {
+    font-size: 0.8rem;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  #headline-sidepanel {
+    padding-left: 15px;
+  }
+
+  .boards-nav-links-div {
+    gap: 0;
+    height: 100%;
+  }
+
+  .board-btn {
+    font-size: 0.8rem;
+    padding-left: 15px;
+    margin-right: 15px;
+    font-weight: 700;
+  }
+
+  #create-board-btn {
+    padding-left: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  #side-logo-div {
+    display: none;
+  }
+
+  .side-bar-bottom {
+    height: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .hide-side-bar-div {
+    display: none;
+  }
+
+  .toggle-div {
+    margin: 0;
+    width: 80%;
+    align-items: center;
+    margin: 20px;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 6px;
+    box-sizing: border-box;
+  }
+
+  #label-checkbox-theme {
+    right: 16px;
+  }
+
+  #mobile-label-checkbox-theme {
+    right: 16px;
+  }
+
+  #icon-dark {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+  }
+
+  #icon-light {
+    width: 23px;
+    height: 23px;
+    margin: 0;
+  }
+
+  #headline-sidepanel {
+    padding-bottom: 10px;
+  }
+
+  .side-bar {
+    display: none;
+    padding: 0;
+    height: 60%;
+    width: 30%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    gap: 0;
+    padding-top: 15px;
+    border-radius: 10px;
+    border-right: 0;
+    z-index: 10;
+  }
+
+  .container {
+    height: auto;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .card-column-main {
+    height: auto;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  #header {
+    top: 0;
+    left: 0;
+    height: 80px;
+    margin: 0;
+    padding-left: 18px;
+    padding-right: 10px;
+    border: none;
+  }
+
+  #edit-board-btn {
+    top: 17px;
+    display: flex;
+    right: 10px;
+    padding: 0;
+  }
+
+  #three-dots-icon {
+    padding: 0;
+    margin: 0;
+  }
+
+  #add-new-task-btn {
+    display: none;
+    font-size: 0;
+    padding: 12px;
+  }
+
+  #editBoardDiv {
+    margin: 0;
+    top: 85px;
+    right: 10px;
+    bottom: 0;
+    z-index: 6;
+    padding: 20px;
+    width: 80px;
+    height: 30px;
+  }
+
+  .header-board-name {
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+
+  .header-board-name {
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+
+  #deleteBoardBtn {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  #header-board-name {
+    font-size: 40px;
+  }
+
+  .column-div {
+    padding: 18px;
+    width: 100%;
+  }
+
+  .task-div {
+    height: 70px;
+  }
+
+  .modal-window {
+    width: 95%;
+  }
+
+  .columnHeader {
+    font-size: 12px;
+  }
+
+  .dot {
+    height: 8px;
+    width: 8px;
+  }
+
+  .column-head-div {
+    gap: 8px;
+  }
+
+  .edit-task-modal-window {
+    width: 95%;
+  }
+}

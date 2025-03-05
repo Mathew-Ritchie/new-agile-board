@@ -1,8 +1,8 @@
 .mobile-side-bar {
   background-color: var(--primary-color);
-  height: 70%;
+  height: 85%;
   position: absolute;
-  top: 50%;
+  top: 360px;
   left: 50%;
   transform: translate(-50%, -50%);
   padding-top: 15px;
@@ -82,7 +82,7 @@
 
 .mobile-add-new-board-btn {
   margin-bottom: 0px;
-  padding: 10px 20px;
+  padding: 7px 15px;
   background-color: #219c90;
   font-size: large;
   color: white;
@@ -145,12 +145,12 @@ input:checked + #mobile-label-checkbox-theme:after {
 
 #mobile-hide-side-bar-btn {
   margin-bottom: 20px;
-  padding: 10px 20px;
-  background-color: #219c90;
+  padding: 7px 15px;
+  background-color: #ea5555;
   font-size: large;
   color: white;
   border-radius: 10px;
-  border: #219c90;
+  border: #ea5555;
 }
 
 @media screen and (min-width: 800px) {

@@ -1,0 +1,44 @@
+/* Laptops and Desktops */
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .tasks-container {
+    text-align: center;
+  }
+
+  #header {
+    padding-left: 30px;
+    padding-right: 35px;
+  }
+
+  #add-new-task-btn {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .column-div {
+    padding: 60px 30px;
+  }
+
+  .task-div {
+    height: 80px;
+  }
+
+  .modal-window {
+    width: 30%;
+  }
+  .side-bar {
+    width: 300px;
+  }
+  h2 {
+    font-size: 1em;
+  }
+}

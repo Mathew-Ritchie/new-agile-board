@@ -1,0 +1,38 @@
+@media screen and (min-width: 2560px) {
+  body {
+    font-size: 16px;
+  }
+
+  .side-bar {
+    width: 350px;
+  }
+
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #header {
+    padding-left: 40px;
+    padding-right: 50px;
+  }
+
+  #add-new-task-btn {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .column-div {
+    padding: 60px;
+  }
+
+  .task-div {
+    height: 90px;
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .modal-window {
+    width: 30%;
+  }
+}

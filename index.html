@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./mobile-nav.css" />
     <link rel="stylesheet" href="./add-board-form.css" />
+    <link rel="stylesheet" href="./@media-max-width-800px.css" />
+    <link rel="stylesheet" href="./@media-max-width-480px.css" />
+    <link rel="stylesheet" href="./@media-min-width-1025px.css" />
+    <link rel="stylesheet" href="./@media-min-width-2560px.css" />
+    <link rel="stylesheet" href="./@media-min-481px-max-1024px.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.svg" />
     <title>Agile Board Task Management</title>
   </head>
@@ -35,7 +40,6 @@
             <img src="./assets/icon-light-theme.svg" id="icon-light" alt="icon-light-theme" />
           </div>
           <div class="hide-side-bar-div">
-            <img src="./assets/icon-hide-sidebar.svg" alt="icon-hide-sidebar" />
             <button id="hide-side-bar-btn">Hide Sidebar</button>
           </div>
         </div>
@@ -205,6 +209,7 @@
     <!-- Add new Board modal window -->
 
     <form id="new-board-form">
+      <h1 id="new-board-form-header">Add a Board!</h1>
       <div id="new-board-div">
         <input
           type="text"

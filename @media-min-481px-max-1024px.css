@@ -1,0 +1,39 @@
+/* Tablets */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    /* max-width: 100%;  */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #add-new-task-btn {
+    font-size: 16px;
+    padding: 18px;
+  }
+
+  .column-div {
+    padding: 40px;
+  }
+
+  .task-div {
+    height: 110px;
+    margin-bottom: 15px;
+  }
+
+  .modal-window {
+    width: 70%;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+}
